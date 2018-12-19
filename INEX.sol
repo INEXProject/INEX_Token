@@ -76,21 +76,21 @@ contract StandardToken is ERC20, SafeMath {
   }
 }
 
-contract InternetExchangeToken is StandardToken {
+contract INEXTokenNew is StandardToken {
     /*
     NOTE:
     The following variables are OPTIONAL vanities. One does not have to include them.
     They allow one to customise the token contract & in no way influences the core functionality.
     Some wallets/interfaces might not even bother to look at this information.
     */
-    string public name = "InternetExchangeToken";   
-    string public symbol = "INEX"; 
+    string public name = "Internet Exchange Token";
+    string public symbol = "INEX";
     uint public decimals = 8;
 
-    uint public totalSupply = 4500000000000000000;
+    uint public totalSupply = 5500000000000000000;
  
 
-    function INEX() {
+    function INEXTokenNew() {
         balances[msg.sender] = totalSupply;
         Transfer(address(0), msg.sender, totalSupply);
     }
